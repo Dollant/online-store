@@ -40,7 +40,10 @@ public class Store {
                 String name = tokens[1].trim();
                 double price = Double.parseDouble(tokens[2].trim());
                 String department = tokens[3].trim();
+
+                inventory.put(sku, new Product(sku, name, price, department));
             }
+            reader.close();
         } catch ()
     }
 }
