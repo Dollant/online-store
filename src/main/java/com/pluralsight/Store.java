@@ -86,6 +86,14 @@ public class Store {
             System.out.println("\n°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･");
             System.out.println("\t  Products    ");
             System.out.println("°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･");
+
+            System.out.printf("%-8s %-40s %-10s %-15s%n", "SKU", "Name", "Price", "Department");
+            System.out.println("-".repeat(75));
+            for (String key : inventory.keySet()) {
+                Product p = inventory.get(key);
+                System.out.printf("%-8s %-40s $%-9.2f %-15s%n",
+                        p.getSku(), p.getName(), p.getPrice(), p.getDepartment());
+            }
         }
     }
 }
