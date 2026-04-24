@@ -298,6 +298,13 @@ public class Store {
         try {
             java.io.File folder = new java.io.File("Receipts");
             if (!folder.exists()) folder.mkdir();
+
+            String fileName = "Receipts/" + timestamp + ".txt";
+            FileWriter writer = new FileWriter(fileName);
+            writer.write(receipt);
+            writer.close();
+
+            System.out.println("Receipt saved to: " + fileName);
         }
     }
 }
