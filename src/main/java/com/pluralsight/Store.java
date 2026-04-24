@@ -49,4 +49,8 @@ public class Store {
             System.out.println("Error loading inventory" + e.getMessage());
         }
     }
+
+    public static void showHomeScreen() {
+        String choice = "";
+    }
 }
