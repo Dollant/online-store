@@ -216,5 +216,9 @@ public class Store {
         }
     }
 
+    public static void removeFromCart() {
+        System.out.print("\nEnter SKU of product to remove: ");
+        String sku = keyboard.nextLine().trim().toUpperCase();
 
+    }
 }
