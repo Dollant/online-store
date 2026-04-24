@@ -115,4 +115,16 @@ public class Store {
             }
         }
     }
+
+    public static void searchProducts() {
+        System.out.println("\nSearch by: 1★ Name    2★ Price    3★ Department");
+        System.out.print("Choose: ");
+        String filter = keyboard.nextLine().trim();
+
+        System.out.print("Enter search term: ");
+        String term = keyboard.nextLine().trim().toLowerCase();
+
+        System.out.printf("%n%-8s %-40s %-10s %-15s%n", "SKU", "Name", "Price", "Department");
+        System.out.println("-".repeat(75));
+    }
 }
