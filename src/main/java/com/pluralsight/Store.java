@@ -305,6 +305,8 @@ public class Store {
             writer.close();
 
             System.out.println("Receipt saved to: " + fileName);
+        } catch (IOException e) {
+            System.out.println("Could not save receipt: " + e.getMessage());
         }
     }
 }
