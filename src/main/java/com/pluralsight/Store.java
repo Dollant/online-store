@@ -15,4 +15,6 @@ public class Store {
     static HashMap<String, Product> inventory = new HashMap<>();
 
     static ArrayList<String> cart = new ArrayList<>();
+
+    static Scanner keyboard = new Scanner(System.in);
 }
