@@ -44,6 +44,9 @@ public class Store {
                 inventory.put(sku, new Product(sku, name, price, department));
             }
             reader.close();
-        } catch ()
+
+        } catch (IOException e) {
+            System.out.println("Error loading inventory" + e.getMessage());
+        }
     }
 }
