@@ -78,4 +78,14 @@ public class Store {
             }
         }
     }
+
+    public static void showProductsScreen() {
+        String choice = "";
+
+        while (!choice.equals("3")) {
+            System.out.println("\n°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･");
+            System.out.println("\t  Products    ");
+            System.out.println("°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･");
+        }
+    }
 }
