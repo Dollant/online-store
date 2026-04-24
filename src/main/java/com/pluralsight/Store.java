@@ -291,5 +291,7 @@ public class Store {
         System.out.println("\n" + receipt);
         saveReceipt(receipt.toString(), now.format(fileFormat));
 
+        cart.clear();
+
     }
 }
