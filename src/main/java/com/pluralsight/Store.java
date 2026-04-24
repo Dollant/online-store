@@ -194,6 +194,27 @@ public class Store {
                 System.out.println("-".repeat(70));
                 System.out.printf("%-55s $%.2f%n", "TOTAL:", total);
             }
+
+            System.out.println("\n1 ࣪ ִֶָ☾. Check Out");
+            System.out.println("2 ࣪ ִֶָ☾. Remove Product");
+            System.out.println("3 ࣪ ִֶָ☾. Go back");
+            System.out.print("\nChoose an option: ");
+            choice = keyboard.nextLine().trim();
+
+            switch (choice) {
+                case "1":
+                    checkOut();
+                    break;
+                case "2":
+                    removeFromCart();
+                    break;
+                case "3":
+                    break;
+                default:
+                    System.out.println("Invalid option.");
+            }
         }
     }
+
+
 }
