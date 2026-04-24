@@ -177,6 +177,19 @@ public class Store {
                 for (String sku : cart) {
                     quantities.put(sku, quantities.getOrDefault(sku, 0) + 1);
                 }
+
+                double total = 0;
+                System.out.printf("%-8s %-40s %-6s %-10s%n", "SKU", "Name", "Qty", "Subtotal");
+                System.out.println("-".repeat(70));
+
+                for (String sku : quantities.keySet()) {
+                    Product p = inventory.get(sku);
+                    int qty = quantities.get(sku);
+                    double subtotal = p.getPrice() * qty;
+                    total += subtotal;
+                    System.out.printf("%-8s %-40s %-6d $%.2f%n",
+                            p.getSku(), p.getName(), qty, subtotal);
+                }
             }
         }
     }
