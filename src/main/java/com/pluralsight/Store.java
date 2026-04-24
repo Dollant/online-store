@@ -17,4 +17,8 @@ public class Store {
     static ArrayList<String> cart = new ArrayList<>();
 
     static Scanner keyboard = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+    }
 }
