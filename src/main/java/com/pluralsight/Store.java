@@ -292,6 +292,11 @@ public class Store {
         saveReceipt(receipt.toString(), now.format(fileFormat));
 
         cart.clear();
+    }
 
+    public static void saveReceipt(String receipt, String timestamp) {
+        try {
+
+        }
     }
 }
