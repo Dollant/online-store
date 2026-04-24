@@ -220,5 +220,19 @@ public class Store {
         System.out.print("\nEnter SKU of product to remove: ");
         String sku = keyboard.nextLine().trim().toUpperCase();
 
+        if (cart.contains(sku)) {
+            cart.remove(sku);
+            System.out.println("Item removed from cart.");
+        } else {
+            System.out.println("That SKU is not in your cart.");
+        }
+    }
+
+    public static void checkOut() {
+        if (cart.isEmpty()) {
+            System.out.println("Your cart is empty. Nothing to check out.");
+            return;
+        }
+
     }
 }
