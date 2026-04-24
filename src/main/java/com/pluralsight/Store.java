@@ -126,5 +126,22 @@ public class Store {
 
         System.out.printf("%n%-8s %-40s %-10s %-15s%n", "SKU", "Name", "Price", "Department");
         System.out.println("-".repeat(75));
+
+        for (String key : inventory.keySet()) {
+            Product p = inventory.get(key);
+            boolean match = false;
+
+            switch (filter) {
+                case "1":
+                    match = p.getName().toLowerCase().contains(term);
+                    break;
+                case "2":
+                    match = String.valueOf(p.getPrice()).contains(term);
+                    break;
+                case "3":
+                    match = p.getDepartment().toLowerCase().contains(term);
+                    break;
+            }
+        }
     }
 }
