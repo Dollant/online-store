@@ -234,5 +234,16 @@ public class Store {
             return;
         }
 
+        double total = 0;
+        HashMap<String, Integer> quantities = new HashMap<>();
+        for (String sku : cart) {
+            quantities.put(sku, quantities.getOrDefault(sku, 0) + 1);
+        }
+        for (String sku : quantities.keySet()) {
+            total += inventory.get(sku).getPrice() * quantities.get(sku);
+        }
+
+        System.out.printf("%nYour total is: $%.2f%n", total);
+        System.out.print("Enter payment amount: $");
     }
 }
