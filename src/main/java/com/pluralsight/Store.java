@@ -259,6 +259,8 @@ public class Store {
             return;
         }
 
+        double change = payment - total;
+
 
     }
 }
