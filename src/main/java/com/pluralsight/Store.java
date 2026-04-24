@@ -142,6 +142,11 @@ public class Store {
                     match = p.getDepartment().toLowerCase().contains(term);
                     break;
             }
+
+            if (match) {
+                System.out.printf("%-8s %-40s $%-9.2f %-15s%n",
+                        p.getSku(), p.getName(), p.getPrice(), p.getDepartment());
+            }
         }
     }
 }
