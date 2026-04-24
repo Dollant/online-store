@@ -265,5 +265,27 @@ public class Store {
         DateTimeFormatter displayFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         DateTimeFormatter fileFormat    = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
 
+        StringBuilder receipt = new StringBuilder();
+        receipt.append("°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･\n");
+        receipt.append("\t SALES RECEIPT    \n");
+        receipt.append("°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･\n");
+        receipt.append("Date: ").append(now.format(displayFormat)).append("\n\n");
+        receipt.append(String.format("%-40s %-6s %-10s%n", "Item", "Qty", "Subtotal"));
+        receipt.append("-".repeat(58)).append("\n");
+
+        for (String sku : quantities.keySet()) {
+            Product p = inventory.get(sku);
+            int qty = quantities.get(sku);
+            double subtotal = p.getPrice() * qty;
+            receipt.append(String.format("%-40s %-6d $%.2f%n", p.getName(), qty, subtotal));
+        }
+
+        receipt.append("-".repeat(58)).append("\n");
+        receipt.append(String.format("%-47s $%.2f%n", "Sales Total:", total));
+        receipt.append(String.format("%-47s $%.2f%n", "Amount Paid:", payment));
+        receipt.append(String.format("%-47s $%.2f%n", "Change Given:", change));
+        receipt.append("°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･\n");
+        receipt.append("\t Thank you for shopping! ദ്ദി◝ ⩊ ◜.ᐟ    \n");
+        receipt.append("°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･\n");
     }
 }
