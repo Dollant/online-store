@@ -245,5 +245,13 @@ public class Store {
 
         System.out.printf("%nYour total is: $%.2f%n", total);
         System.out.print("Enter payment amount: $");
+
+        double payment = 0;
+        try {
+            payment = Double.parseDouble(keyboard.nextLine().trim());
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid payment amount.");
+            return;
+        }
     }
 }
