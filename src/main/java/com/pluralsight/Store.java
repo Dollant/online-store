@@ -94,6 +94,25 @@ public class Store {
                 System.out.printf("%-8s %-40s $%-9.2f %-15s%n",
                         p.getSku(), p.getName(), p.getPrice(), p.getDepartment());
             }
+
+            System.out.println("\n1 ࣪ ִֶָ☾. Search / Filter Products");
+            System.out.println("2 ࣪ ִֶָ☾. Add Product to Cart");
+            System.out.println("3 ࣪ ִֶָ☾. Go back");
+            System.out.print("\nChoose an option: ");
+            choice = keyboard.nextLine().trim();
+
+            switch (choice) {
+                case "1":
+                    searchProducts();
+                    break;
+                case "2":
+                    addToCart();
+                    break;
+                case "3":
+                    break;
+                default:
+                    System.out.println("Invalid option.");
+            }
         }
     }
 }
