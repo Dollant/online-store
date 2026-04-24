@@ -287,5 +287,9 @@ public class Store {
         receipt.append("°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･\n");
         receipt.append("\t Thank you for shopping! ദ്ദി◝ ⩊ ◜.ᐟ    \n");
         receipt.append("°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･\n");
+
+        System.out.println("\n" + receipt);
+        saveReceipt(receipt.toString(), now.format(fileFormat));
+
     }
 }
