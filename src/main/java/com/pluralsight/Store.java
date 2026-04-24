@@ -261,6 +261,9 @@ public class Store {
 
         double change = payment - total;
 
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter displayFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        DateTimeFormatter fileFormat    = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
 
     }
 }
