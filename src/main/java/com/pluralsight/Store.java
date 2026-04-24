@@ -173,7 +173,10 @@ public class Store {
             if (cart.isEmpty()) {
                 System.out.println(" Your cart is empty.");
             } else {
-
+                HashMap<String, Integer> quantities = new HashMap<>();
+                for (String sku : cart) {
+                    quantities.put(sku, quantities.getOrDefault(sku, 0) + 1);
+                }
             }
         }
     }
