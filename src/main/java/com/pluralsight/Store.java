@@ -253,5 +253,12 @@ public class Store {
             System.out.println("Invalid payment amount.");
             return;
         }
+
+        if (payment < total) {
+            System.out.printf("Insufficient payment. You need $%.2f more.%n", total - payment);
+            return;
+        }
+
+
     }
 }
