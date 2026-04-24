@@ -296,7 +296,8 @@ public class Store {
 
     public static void saveReceipt(String receipt, String timestamp) {
         try {
-
+            java.io.File folder = new java.io.File("Receipts");
+            if (!folder.exists()) folder.mkdir();
         }
     }
 }
