@@ -62,6 +62,20 @@ public class Store {
             System.out.println("3 ࣪ ִֶָ☾. Exit");
             System.out.print("\nChoose an option: ");
             choice = keyboard.nextLine().trim();
+
+            switch (choice) {
+                case "1":
+                    showProductsScreen();
+                    break;
+                case "2":
+                    showCartScreen();
+                    break;
+                case "3":
+                    System.out.println("\nThanks for shopping! Goodbye (˶˃ ᵕ ˂˶) .ᐟ.ᐟ");
+                    break;
+                default:
+                    System.out.println("Invalid option. Please enter 1, 2, or 3.");
+            }
         }
     }
 }
