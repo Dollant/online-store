@@ -154,5 +154,27 @@ public class Store {
         System.out.print("\nEnter SKU of product to add: ");
         String sku = keyboard.nextLine().trim().toUpperCase();
 
+        if (inventory.containsKey(sku)) {
+            cart.add(sku);
+            System.out.println(inventory.get(sku).getName() + " added to cart!");
+        } else {
+            System.out.println("SKU not found! Please check the product list.");
+        }
+    }
+
+    public static void showCartScreen() {
+        String choice = "";
+
+        while (!choice.equals("3")) {
+            System.out.println("\n°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･");
+            System.out.println("\t  Your Cart    ");
+            System.out.println("°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･");
+
+            if (cart.isEmpty()) {
+                System.out.println(" Your cart is empty.");
+            } else {
+
+            }
+        }
     }
 }
