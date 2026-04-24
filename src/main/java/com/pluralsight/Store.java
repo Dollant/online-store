@@ -11,4 +11,8 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class Store {
+
+    static HashMap<String, Product> inventory = new HashMap<>();
+
+
 }
