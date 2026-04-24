@@ -22,4 +22,13 @@ public class Store {
         loadInventory();
         showHomeScreen();
     }
+
+    public static void loadInventory() {
+        String fileName = "src/main/resources/products.csv";
+
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(fileName));
+            String line;
+        } catch ()
+    }
 }
