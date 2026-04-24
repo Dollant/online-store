@@ -34,6 +34,12 @@ public class Store {
 
             while ((line = reader.readLine()) !=null) {
                 if (line.trim().isEmpty()) continue;
+
+                String[] tokens = line.split("\\|");
+                String sku = tokens[0].trim();
+                String name = tokens[1].trim();
+                double price = Double.parseDouble(tokens[2].trim());
+                String department = tokens[3].trim();
             }
         } catch ()
     }
