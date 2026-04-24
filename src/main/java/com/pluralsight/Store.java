@@ -190,6 +190,9 @@ public class Store {
                     System.out.printf("%-8s %-40s %-6d $%.2f%n",
                             p.getSku(), p.getName(), qty, subtotal);
                 }
+
+                System.out.println("-".repeat(70));
+                System.out.printf("%-55s $%.2f%n", "TOTAL:", total);
             }
         }
     }
