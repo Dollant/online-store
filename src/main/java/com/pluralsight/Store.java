@@ -149,4 +149,10 @@ public class Store {
             }
         }
     }
+
+    public static void addToCart() {
+        System.out.print("\nEnter SKU of product to add: ");
+        String sku = keyboard.nextLine().trim().toUpperCase();
+
+    }
 }
